@@ -1,0 +1,22 @@
+<h1><%= @task.title %></h1>
+<div class="btn edit-btn"><%= link_to "Edit Task", edit_path %></div>
+<div class='description-box'>
+  <%= @task.details %>
+</div>
+
+<div class="completed">
+  <% if @task.completed %>
+    <ul class="list-inline">
+      <li class="list-inline-item"><i class="far fa-check-square"></i></li>
+      <li class="list-inline-item"><p>This task has been completed</p></li>
+    </ul>
+  <% else %>
+    <ul>
+      <li class="list-inline-item"><i class="far fa-square"></i></li>
+      <li class="list-inline-item"><p>This task is not completed yet</p></li>
+    </ul>
+  <% end %>
+</div>
+
+<div class='link back'><%= link_to "Back to list", index_path %></div>
+
